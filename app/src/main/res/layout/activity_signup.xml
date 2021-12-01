@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Signup">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/mdetec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/heavy"
+        android:text="@string/mdetect"
+        android:textColor="@color/grey"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:fontFamily="@font/light"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sign_up"
+        android:textColor="@color/grey"
+        android:textSize="25sp"
+        android:alpha="0.5"/>
+
+
+    <EditText
+        android:id="@+id/email_address"
+        android:layout_width="300dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:fontFamily="@font/light"
+        android:layout_below="@+id/signup"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_address"
+        android:background="@drawable/input_field"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:fontFamily="@font/light"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/email_address"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/input_field" />
+
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:fontFamily="@font/light"
+        android:textSize="16sp"
+        android:layout_below="@id/confirmpass"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="signup"
+        android:background="@drawable/button" />
+
+    <EditText
+        android:id="@+id/confirmpass"
+        android:layout_width="300dp"
+        android:layout_height="43dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_field"
+        android:ems="10"
+        android:fontFamily="@font/light"
+        android:hint="@string/confirm_password"
+        android:inputType="textPassword" />
+
+</RelativeLayout>

@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_home.xml" value="0.26358695652173914" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_login.xml" value="0.26358695652173914" />
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_main.xml" value="0.26358695652173914" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_signup.xml" value="0.26358695652173914" />
       </map>
     </option>
   </component>
