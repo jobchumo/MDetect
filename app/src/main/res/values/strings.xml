@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">MDetect</string>
+    <string name="mdetect">MDetect</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="login">LogIn</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="update">Update Profile</string>
+    <string name="full_name">Full Name</string>
+    <string name="log_in">Log In</string>
+    <string name="email_address">Email Address</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="log_out">Log Out</string>
+    <string name="change_password">Change Password</string>
+    <string name="login_successful">Login Successful</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "789493163395",
+    "firebase_url": "https://mddetect-3c955-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "mddetect-3c955",
+    "storage_bucket": "mddetect-3c955.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:789493163395:android:8e2867ee070725531842b6",
+        "android_client_info": {
+          "package_name": "com.jobchumo.mddetect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "789493163395-ruj2q497k6hgretnsgrghr0d5v01p7e5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jobchumo.mddetect",
+            "certificate_hash": "f1e2614c6f41dd73690682878a212b9f0555d675"
+          }
+        },
+        {
+          "client_id": "789493163395-ej2fhue266beg8dfjvli8f59b3d4jo7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6C_7NgcsbsqZnSEuy45yOzLQVAzxNzMw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "789493163395-ej2fhue266beg8dfjvli8f59b3d4jo7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
