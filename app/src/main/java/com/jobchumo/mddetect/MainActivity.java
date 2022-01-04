@@ -26,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         userEmail = findViewById(R.id.showuseremail);
         userEmail.setText("Welcome: " + firebaseUser.getEmail());
+
+        twitterTrials();
+    }
+
+    private void twitterTrials() {
     }
 
     public void Logout(View view) {

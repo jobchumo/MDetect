@@ -19,4 +19,7 @@
     <string name="log_out">Log Out</string>
     <string name="change_password">Change Password</string>
     <string name="login_successful">Login Successful</string>
+    <string name="enter_your_twitter_username_below">Enter your Twitter username below</string>
+    <string name="so_we_can_get_access_to_your_timeline">so we can get access to your timeline</string>
+    <string name="twitter_user_timeline">Twitter User Timeline</string>
 </resources>
