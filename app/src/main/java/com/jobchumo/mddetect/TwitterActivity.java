@@ -1,37 +1,34 @@
 package com.jobchumo.mddetect;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.NetworkOnMainThreadException;
-import android.os.StrictMode;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
-import com.twitter.clientlib.JSON;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.xml.sax.InputSource;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
+import java.util.List;
 
 import io.github.redouane59.twitter.TwitterClient;
 import io.github.redouane59.twitter.dto.tweet.Tweet;
 import io.github.redouane59.twitter.dto.tweet.TweetList;
+import io.github.redouane59.twitter.dto.tweet.TweetV2;
 import io.github.redouane59.twitter.dto.user.User;
 import io.github.redouane59.twitter.signature.TwitterCredentials;
 
@@ -41,6 +38,11 @@ public class TwitterActivity extends AppCompatActivity {
     protected EditText username;
     protected FirebaseUser firebaseUser;
     protected FirebaseAuth firebaseAuth;
+    protected FirebaseDatabase firebaseDatabase;
+    protected DatabaseReference databaseReference;
+    protected DatabaseReference mUser;
+    protected ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,65 +60,90 @@ public class TwitterActivity extends AppCompatActivity {
         username = findViewById(R.id.twitterUsername);
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        mUser = FirebaseDatabase.getInstance().getReference("Timeline");
+        progressDialog = new ProgressDialog(this);
 
 
     }
 
-    private class MyTask extends AsyncTask<Void, Void, Void>{
 
+    private class MyTask extends AsyncTask<Void, Void, Void>{
+        String usernam = username.getText().toString();
+        String id;
+        String tweetId = "1478303491177259008";
+        String tweetText;
         @Override
         protected Void doInBackground(Void... voids) {
-            String usernam = username.getText().toString();
+
+
             try {
                 User user = twitterClient.getUserFromUserName(usernam);
-                String id = user.getId();
+                id = user.getId();
                 Log.d("UserID", id);
 
-                Tweet tweet = twitterClient.getTweet("1478303491177259008");
-                System.out.println(tweet.getText());
-                String tweetText = tweet.getText();
+
+                Tweet tweet = twitterClient.getTweet(tweetId);
+                tweetText = tweet.getText();
                 Log.d("Tweet", tweetText);
 
+
+
                 TweetList userTimeline = twitterClient.getUserTimeline(id);
-                System.out.println(userTimeline.getData());
+                List<TweetV2.TweetData> tweetList = userTimeline.getData();
+                Log.d("UserTimeline", String.valueOf(tweetList));
             } catch (NetworkOnMainThreadException e){
                 e.printStackTrace();
             }
+
+
             return null;
         }
         @Override
         protected void onPostExecute(Void aVoid) {
+            String usernam = username.getText().toString();
 
+            twitterTweets(tweetId, tweetText);
             super.onPostExecute(aVoid);
         }
     }
 
-    private void twitterTweets(String userName) {
-//        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//
-//        StrictMode.setThreadPolicy(policy);
-//
-//        try {
-//            User user = twitterClient.getUserFromUserName(userName);
-//            String id = user.getId();
-//
-//            Tweet tweet = twitterClient.getTweet("1478303491177259008");
-//            System.out.println(tweet.getText());
-//
-//            TweetList userTimeline = twitterClient.getUserTimeline(id);
-//            System.out.println(userTimeline.getData());
-//        } catch (NetworkOnMainThreadException e) {
-//            Log.d("Network Exception", e.getMessage());
-//        }
+    private void twitterTweets(String tweetId, String tweetText) {
+
+        progressDialog.setMessage("Getting your timeline");
+        progressDialog.show();
+
+        String userName = username.getText().toString();
+        TimelineInfo info = new TimelineInfo(tweetId, tweetText);
+
+
+        Log.d("Username", userName);
+        Log.d("TweetID", tweetId);
+        Log.d("TEXT", tweetText);
+
+
+        databaseReference.child("Timeline").child(firebaseUser.getUid()).setValue(info)
+                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(TwitterActivity.this,"Timeline Saved",Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                        }
+                        else {
+                            FirebaseAuthException e = (FirebaseAuthException )task.getException();
+                            Toast.makeText(TwitterActivity.this, "Failed To Save Information: "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                            return;
+                        }
+                    }
+                });
 
 
     }
 
     public void userTimeline(View view) {
         String userName = username.getText().toString().trim();
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Getting Your Timeline...");
-        progressDialog.show();
         //String url = "https://api.twitter.com/2/users/by/username/jobchumo\" -H \"Authorization: Bearer $AAAAAAAAAAAAAAAAAAAAAKzISwEAAAAArZZ4ThC0joFGnlENHNZPVHZfrdo%3DJc8MadyRgarKojzrhcaH0pJS2w8oBXT6u1IDvAcaDfjW0ILqG4";
 
         if (TextUtils.isEmpty(userName)) {
@@ -125,8 +152,13 @@ public class TwitterActivity extends AppCompatActivity {
         }
         else {
             new MyTask().execute();
-            progressDialog.hide();
+
         }
 
     }
+
+    public void mood(View view) {
+        startActivity(new Intent(TwitterActivity.this, MoodActivity.class));
+    }
+
 }

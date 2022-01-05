@@ -23,4 +23,6 @@
     <string name="so_we_can_get_access_to_your_timeline">so we can get access to your timeline</string>
     <string name="twitter_user_timeline">Twitter User Timeline</string>
     <string name="twitter_username">Twitter Username</string>
+    <string name="see_your_mood">See Your Mood</string>
+    <string name="get_timeline">Get Timeline</string>
 </resources>
