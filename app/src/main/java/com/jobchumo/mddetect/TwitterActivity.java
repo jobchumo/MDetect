@@ -82,16 +82,14 @@ public class TwitterActivity extends AppCompatActivity {
                 id = user.getId();
                 Log.d("UserID", id);
 
-
-                Tweet tweet = twitterClient.getTweet(tweetId);
-                tweetText = tweet.getText();
-                Log.d("Tweet", tweetText);
-
-
-
                 TweetList userTimeline = twitterClient.getUserTimeline(id);
                 List<TweetV2.TweetData> tweetList = userTimeline.getData();
-                Log.d("UserTimeline", String.valueOf(tweetList));
+
+                for (int i = 0; i<tweetList.size(); i++) {
+                    String nu = tweetList.get(i).getText();
+                    Log.d("tweet Content", nu);
+                }
+
             } catch (NetworkOnMainThreadException e){
                 e.printStackTrace();
             }
@@ -103,7 +101,7 @@ public class TwitterActivity extends AppCompatActivity {
         protected void onPostExecute(Void aVoid) {
             String usernam = username.getText().toString();
 
-            twitterTweets(tweetId, tweetText);
+            //twitterTweets(tweetId, tweetText);
             super.onPostExecute(aVoid);
         }
     }
@@ -158,6 +156,7 @@ public class TwitterActivity extends AppCompatActivity {
     }
 
     public void mood(View view) {
+        new MyTask().execute();
         startActivity(new Intent(TwitterActivity.this, MoodActivity.class));
     }
 
