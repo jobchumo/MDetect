@@ -32,10 +32,30 @@
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/success"
-        android:text="@string/log_out"
+        android:text="@string/twitter_activity"
         android:textAllCaps="false"
         android:background="@drawable/button"
         android:fontFamily="@font/light"
-        android:onClick="Logout"/>
+        android:onClick="twitter_act"/>
+
+    <TextView
+        android:id="@+id/log_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/light"
+        android:text="@string/log_out"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/log_out_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@id/log_out"
+        android:src="@drawable/logout_icon" />
 
 </RelativeLayout>

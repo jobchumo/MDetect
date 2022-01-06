@@ -1,27 +1,29 @@
 package com.jobchumo.mddetect;
 
+import java.util.List;
+
 public class TimelineInfo {
-    String tweetID;
-    String tweetText;
+    String twitterUserId;
+    List<String> tweets;
 
-    public TimelineInfo(String tweetID, String tweetText) {
-        this.tweetID = tweetID;
-        this.tweetText = tweetText;
+    public TimelineInfo(String twitterUserId, List<String> tweets) {
+        this.twitterUserId = twitterUserId;
+        this.tweets = tweets;
     }
 
-    public String getTweetID() {
-        return tweetID;
+    public String getTwitterUserId() {
+        return twitterUserId;
     }
 
-    public void setTweetID(String tweetID) {
-        this.tweetID = tweetID;
+    public void setTwitterUserId(String twitterUserId) {
+        this.twitterUserId = twitterUserId;
     }
 
-    public String getTweetText() {
-        return tweetText;
+    public List<String> getTweets() {
+        return tweets;
     }
 
-    public void setTweetText(String tweetText) {
-        this.tweetText = tweetText;
+    public void setTweets(List<String> tweets) {
+        this.tweets = tweets;
     }
 }

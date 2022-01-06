@@ -30,6 +30,10 @@ public class Login extends AppCompatActivity {
         email = findViewById(R.id.emaili);
         password = findViewById(R.id.passw);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser() !=null){
+            startActivity(new Intent(Login.this, MainActivity.class));
+        }
     }
 
     public void Log_in(View view) {
@@ -51,20 +55,17 @@ public class Login extends AppCompatActivity {
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(email_add, passwe)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                            progressDialog.hide();
-                            finish();
-                            startActivity(new Intent(Login.this, MainActivity.class));
-                        }
-                        else {
-                            FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                            Toast.makeText(Login.this, "Login Failed:\n" + e.getMessage() + "\nPlease Try Again", Toast.LENGTH_SHORT).show();
-                            progressDialog.hide();
-                        }
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        progressDialog.hide();
+                        finish();
+                        startActivity(new Intent(Login.this, MainActivity.class));
+                    }
+                    else {
+                        FirebaseAuthException e = (FirebaseAuthException) task.getException();
+                        Toast.makeText(Login.this, "Login Failed:\n" + e.getMessage() + "\nPlease Try Again", Toast.LENGTH_SHORT).show();
+                        progressDialog.hide();
                     }
                 });
     }
