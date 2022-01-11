@@ -60,7 +60,7 @@ dependencies {
     implementation 'com.twitter:twitter-api-java-sdk:1.0.2'
     implementation 'com.android.volley:volley:1.2.1'
     implementation("io.github.redouane59.twitter:twittered:2.14")
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
