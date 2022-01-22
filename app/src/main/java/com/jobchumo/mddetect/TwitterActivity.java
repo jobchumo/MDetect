@@ -76,8 +76,6 @@ public class TwitterActivity extends AppCompatActivity {
         List<String> tweets = new ArrayList<>();
         @Override
         protected Void doInBackground(Void... voids) {
-
-
             try {
                 User user = twitterClient.getUserFromUserName(usernam);
                 id = user.getId();
@@ -98,8 +96,6 @@ public class TwitterActivity extends AppCompatActivity {
             } catch (NetworkOnMainThreadException e){
                 e.printStackTrace();
             }
-
-
             return null;
         }
         @Override
@@ -147,12 +143,13 @@ public class TwitterActivity extends AppCompatActivity {
             progressDialog.setMessage("Getting your timeline");
             progressDialog.show();
             new MyTask().execute();
-
         }
 
     }
 
     public void mood(View view) {
+        //add code for getting the ml result here then pass it to the mood activity class
+        //or pass the username to the mood activity class then do the url string request code there
         startActivity(new Intent(TwitterActivity.this, MoodActivity.class));
     }
 
