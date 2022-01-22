@@ -26,4 +26,5 @@
     <string name="see_your_mood">See Your Mood</string>
     <string name="get_timeline">Get Timeline</string>
     <string name="twitter_activity">Twitter Activity</string>
+    <string name="current_mood">Current Mood</string>
 </resources>
