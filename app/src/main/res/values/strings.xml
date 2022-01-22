@@ -27,4 +27,5 @@
     <string name="get_timeline">Get Timeline</string>
     <string name="twitter_activity">Twitter Activity</string>
     <string name="current_mood">Current Mood</string>
+    <string name="continue_activity">Continue</string>
 </resources>

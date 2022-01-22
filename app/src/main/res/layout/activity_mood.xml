@@ -7,24 +7,84 @@
     tools:context=".MoodActivity">
 
     <TextView
+        android:id="@+id/currentMood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/light"
-        android:text="@string/current_mood"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="22sp"
-        android:textColor="@color/black"/>
+        android:fontFamily="@font/heavy"
+        android:text="@string/current_mood"
+        android:textColor="@color/grey"
+        android:textSize="22sp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        />
+        android:src="@drawable/arrow_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:onClick="backAction"/>
+
+    <ImageView
+        android:id="@+id/emoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_emoji_emotions_24"
+        android:layout_below="@id/currentMood"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/moodDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/light"/>
+        android:layout_below="@id/emoji"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/light"
+        android:text="Happy"
+        android:textColor="@color/black"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/advice_when_sad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seek Medical Advice"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        android:layout_below="@id/timeDesc"/>
+
+    <TextView
+        android:id="@+id/dateDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="January 26"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:layout_below="@id/moodDesc"/>
+
+    <TextView
+        android:id="@+id/timeDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateDesc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="12:45 PM" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/continue_activity"
+        android:layout_below="@id/moodDesc"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/heavy"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:onClick="continueAction"/>
 
 </RelativeLayout>

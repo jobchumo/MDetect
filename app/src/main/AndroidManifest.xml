@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,14 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".HealthResourcesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MoodActivity"
             android:exported="true"
-            android:screenOrientation="locked"/>
+            android:screenOrientation="locked" />
         <activity
             android:name=".TwitterActivity"
             android:exported="true"
-            android:usesCleartextTraffic="true"
-            android:screenOrientation="locked"/>
+            android:screenOrientation="locked"
+            android:usesCleartextTraffic="true" />
         <activity
             android:name=".Signup"
             android:exported="true"
