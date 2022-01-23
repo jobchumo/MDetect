@@ -29,4 +29,9 @@
     <string name="current_mood">Current Mood</string>
     <string name="continue_activity">Continue</string>
     <string name="mental_health_resources">Mental Health Resources</string>
+    <string name="resources_desc">Don\'t be afraid to ask for help!</string>
+    <string name="line_one">These sites have a wide range of resources\nto help you take care of yourself.</string>
+    <string name="line_two">From people to talk to, to breathing\nexercises.</string>
+    <string name="line_three">And there are coder specific resources.\nHow cool is that!?</string>
+    <string name="line_four">You can find them <a href="https://checkpointorg.com/">here</a> and <a href="https://www.takethis.org/">here</a></string>
 </resources>

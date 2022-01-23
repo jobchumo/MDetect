@@ -26,4 +26,75 @@
         android:layout_marginStart="20dp"
         android:onClick="backAction"/>
 
+    <ImageView
+        android:id="@+id/mh_vector"
+        android:layout_width="354dp"
+        android:layout_height="238dp"
+        android:layout_below="@id/mental_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/round_edges"
+        android:src="@drawable/mhvector" />
+
+    <TextView
+        android:id="@+id/line_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mh_vector"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/light"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/resources_desc"/>
+
+    <TextView
+        android:id="@+id/line_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_one"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/light"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/line_one"/>
+
+    <TextView
+        android:id="@+id/line_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_two"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/light"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/line_two"/>
+
+    <TextView
+        android:id="@+id/line_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_three"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/light"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/line_three"/>
+
+    <TextView
+        android:id="@+id/line_five"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_four"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/light"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/line_four"/>
+
+
 </RelativeLayout>
