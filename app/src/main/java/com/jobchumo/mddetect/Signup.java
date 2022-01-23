@@ -35,6 +35,8 @@ public class Signup extends AppCompatActivity {
         progressBar = new ProgressBar(this);
         firebaseAuth =FirebaseAuth.getInstance();
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
     }
 
     public void signup(View view) {

@@ -78,13 +78,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/continue_activity"
         android:layout_below="@id/moodDesc"
-        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/heavy"
-        android:textSize="16sp"
+        android:onClick="continueAction"
+        android:text="@string/continue_activity"
         android:textColor="@color/red"
-        android:onClick="continueAction"/>
+        android:textSize="20sp" />
 
 </RelativeLayout>

@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_SHORT).show();
                         progressDialog.hide();
                         finish();
-                        startActivity(new Intent(Login.this, MainActivity.class));
+                        startActivity(new Intent(Login.this, TwitterActivity.class));
                     }
                     else {
                         FirebaseAuthException e = (FirebaseAuthException) task.getException();

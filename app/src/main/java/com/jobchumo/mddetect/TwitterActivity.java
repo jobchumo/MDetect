@@ -69,6 +69,9 @@ public class TwitterActivity extends AppCompatActivity {
 
     }
 
+    public void backAction(View view) {
+    }
+
 
     private class MyTask extends AsyncTask<Void, Void, Void>{
         String usernam = username.getText().toString();

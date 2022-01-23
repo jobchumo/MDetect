@@ -9,15 +9,27 @@ import android.view.View;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
+import com.google.firebase.auth.FirebaseAuth;
+
+import io.swagger.v3.oas.models.security.SecurityScheme;
 
 
 public class MoodActivity extends AppCompatActivity {
 
     String url = "";
+    FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
+        if (firebaseAuth.getCurrentUser() == null) {
+            finish();
+            startActivity(new Intent(MoodActivity.this, Login.class));
+        }
 
         determineMood();
     }
