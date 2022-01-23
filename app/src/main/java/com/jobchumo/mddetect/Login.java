@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         if (firebaseAuth.getCurrentUser() !=null){
-            startActivity(new Intent(Login.this, MainActivity.class));
+            startActivity(new Intent(Login.this, TwitterActivity.class));
         }
     }
 

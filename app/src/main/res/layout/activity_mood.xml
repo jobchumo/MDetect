@@ -50,17 +50,17 @@
         android:id="@+id/advice_when_sad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seek Medical Advice"
+        android:layout_below="@id/timeDesc"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="14dp"
-        android:layout_below="@id/timeDesc"/>
+        android:text="Keep it up"
+        android:textSize="14dp" />
 
     <TextView
         android:id="@+id/dateDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="January 26"
+        android:text="January 14"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="18sp"
