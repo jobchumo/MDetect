@@ -18,6 +18,7 @@
         android:textSize="22sp" />
 
     <ImageView
+        android:id="@+id/arrow_go_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/arrow_back"
