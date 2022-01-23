@@ -35,7 +35,7 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/moodDesc"
+        android:id="@+id/mood_Desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/emoji"
@@ -54,17 +54,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Keep it up"
-        android:textSize="14dp" />
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/dateDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="January 14"
+        android:text="January 26"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="18sp"
-        android:layout_below="@id/moodDesc"/>
+        android:layout_below="@id/mood_Desc"/>
 
     <TextView
         android:id="@+id/timeDesc"
@@ -72,13 +72,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/dateDesc"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="12:45 PM" />
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/moodDesc"
+        android:layout_below="@id/mood_Desc"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:fontFamily="@font/heavy"

@@ -23,7 +23,7 @@ public class MoodActivity extends AppCompatActivity {
 
     protected String url = "";
     protected FirebaseAuth firebaseAuth;
-    protected TextView timeView, dateView;
+    protected TextView timeView, dateView, moodDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
