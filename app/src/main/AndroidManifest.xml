@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".HealthResourcesActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="locked" />
         <activity
             android:name=".MoodActivity"
             android:exported="true"
