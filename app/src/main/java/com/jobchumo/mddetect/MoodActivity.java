@@ -33,6 +33,7 @@ public class MoodActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         dateView = findViewById(R.id.dateDesc);
         timeView = findViewById(R.id.timeDesc);
+        moodDesc = findViewById(R.id.mood_Desc);
 
         if (firebaseAuth.getCurrentUser() == null) {
             finish();
