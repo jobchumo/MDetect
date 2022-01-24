@@ -29,10 +29,10 @@
         android:id="@+id/emoji"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_emoji_emotions_24"
         android:layout_below="@id/currentMood"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"/>
+        android:src="@drawable/happy_emoji"/>
 
     <TextView
         android:id="@+id/mood_Desc"

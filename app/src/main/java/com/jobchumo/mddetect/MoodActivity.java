@@ -12,6 +12,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -23,6 +25,9 @@ public class MoodActivity extends AppCompatActivity {
 
     protected String url = "";
     protected FirebaseAuth firebaseAuth;
+    protected FirebaseDatabase firebaseDatabase;
+    protected DatabaseReference databaseReference;
+    protected DatabaseReference mUser;
     protected TextView timeView, dateView, moodDesc;
 
     @Override
@@ -30,6 +35,7 @@ public class MoodActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
 
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         firebaseAuth = FirebaseAuth.getInstance();
         dateView = findViewById(R.id.dateDesc);
         timeView = findViewById(R.id.timeDesc);

@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/arrow_back.xml" value="0.440625" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/arrow_forward.xml" value="0.24537037037037038" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/button.xml" value="0.440625" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/happy_emoji.xml" value="0.24074074074074073" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/ic_baseline_emoji_emotions_24.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/logout_icon.xml" value="0.440625" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/round_edges.xml" value="0.440625" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/drawable/sad_emoji.xml" value="0.440625" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout-v31/activity_health_resources.xml" value="0.4244791666666667" />
+        <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_health_resources.xml" value="0.264" />
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_home.xml" value="0.26358695652173914" />
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_login.xml" value="0.26358695652173914" />
         <entry key="..\:/Users/jokip/AndroidStudioProjects/MDDetect/app/src/main/res/layout/activity_main.xml" value="0.26358695652173914" />
