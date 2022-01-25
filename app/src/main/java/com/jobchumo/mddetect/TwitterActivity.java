@@ -11,12 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,7 +23,6 @@ import java.util.List;
 
 import io.github.redouane59.twitter.TwitterClient;
 import io.github.redouane59.twitter.dto.endpoints.AdditionalParameters;
-import io.github.redouane59.twitter.dto.tweet.Tweet;
 import io.github.redouane59.twitter.dto.tweet.TweetList;
 import io.github.redouane59.twitter.dto.tweet.TweetV2;
 import io.github.redouane59.twitter.dto.user.User;
@@ -152,8 +146,6 @@ public class TwitterActivity extends AppCompatActivity {
     }
 
     public void mood(View view) {
-        //add code for getting the ml result here then pass it to the mood activity class
-        //or pass the username to the mood activity class then do the url string request code there
         startActivity(new Intent(TwitterActivity.this, MoodActivity.class));
     }
 

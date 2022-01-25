@@ -66,20 +66,17 @@ public class Signup extends AppCompatActivity {
         progressDialog.show();
 
         firebaseAuth.createUserWithEmailAndPassword(emaili, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Signup.this, "Registration Successful \nYou Can Now Login", Toast.LENGTH_SHORT).show();
-                            progressDialog.hide();
-                            finish();
-                            startActivity(new Intent(Signup.this, Login.class));
-                        }
-                        else {
-                            FirebaseAuthException e = (FirebaseAuthException) task.getException();
-                            Toast.makeText(Signup.this, "Registration Failed: \n" + e.getMessage(), Toast.LENGTH_SHORT).show();
-                            progressDialog.hide();
-                        }
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(Signup.this, "Registration Successful \nYou Can Now Login", Toast.LENGTH_SHORT).show();
+                        progressDialog.hide();
+                        finish();
+                        startActivity(new Intent(Signup.this, Login.class));
+                    }
+                    else {
+                        FirebaseAuthException e = (FirebaseAuthException) task.getException();
+                        Toast.makeText(Signup.this, "Registration Failed: \n" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        progressDialog.hide();
                     }
                 });
     }

@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
         firebaseUser = firebaseAuth.getCurrentUser();
 
         userEmail = findViewById(R.id.showuseremail);
-        userEmail.setText("Welcome: " + firebaseUser.getEmail());
+        String welcome = "Welcome ";
+        userEmail.setText(welcome+firebaseUser.getEmail());
 
         logout = findViewById(R.id.log_out);
         log_outIcon = findViewById(R.id.log_out_icon);
