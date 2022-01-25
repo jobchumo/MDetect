@@ -4,14 +4,14 @@
     <string name="sign_up">Sign Up</string>
 
     <string name="welcome">Welcome</string>
-    <string name="login">LogIn</string>
+    <string name="login">Login</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="search">Search</string>
     <string name="update">Update Profile</string>
     <string name="full_name">Full Name</string>
-    <string name="log_in">Log In</string>
+    <string name="log_in">Login</string>
     <string name="email_address">Email Address</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="username">Username</string>
@@ -34,4 +34,6 @@
     <string name="line_two">From people to talk to, to breathing\nexercises.</string>
     <string name="line_three">And there are coder specific resources.\nHow cool is that!?</string>
     <string name="line_four">You can find them <a href="https://checkpointorg.com/">here</a> and <a href="https://www.takethis.org/">here</a></string>
+    <string name="happy">Happy</string>
+    <string name="sad">Sad</string>
 </resources>

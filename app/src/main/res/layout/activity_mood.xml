@@ -26,23 +26,23 @@
         android:onClick="backAction"/>
 
     <ImageView
-        android:id="@+id/emoji"
+        android:id="@+id/emoji_mood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/currentMood"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:src="@drawable/happy_emoji"/>
+        android:src="@drawable/happy_emoji" />
 
     <TextView
         android:id="@+id/mood_Desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/emoji"
+        android:layout_below="@id/emoji_mood"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/light"
-        android:text="Happy"
+        android:text="@string/happy"
         android:textColor="@color/black"
         android:textSize="48sp" />
 
@@ -53,7 +53,6 @@
         android:layout_below="@id/timeDesc"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Keep it up"
         android:textSize="14sp" />
 
     <TextView

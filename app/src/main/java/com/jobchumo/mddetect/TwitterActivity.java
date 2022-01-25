@@ -70,6 +70,7 @@ public class TwitterActivity extends AppCompatActivity {
     }
 
     public void backAction(View view) {
+        startActivity(new Intent(TwitterActivity.this, MainActivity.class));
     }
 
 
