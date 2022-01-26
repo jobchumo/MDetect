@@ -46,11 +46,11 @@ public class TwitterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_twitter);
 
         twitterClient = new TwitterClient(TwitterCredentials.builder()
-                .accessToken("717751924129472512-wyxzUq8Os3IgMprko2pAkkFLSEQ59q2")
-                .accessTokenSecret("4Tq0uQXt95eKxrmr6RA7hQP40SPTzpG7Hujek5ftZT3ZY")
-                .apiKey("24xvUJF9KUdjseqCY2FTkVCc5")
-                .apiSecretKey("RzPVUxgeXYzgUfR8vrAsdRC0yEZqCa4KJkK9DXaNtOlXB0GV24")
-                .bearerToken("AAAAAAAAAAAAAAAAAAAAAKzISwEAAAAArZZ4ThC0joFGnlENHNZPVHZfrdo%3DJc8MadyRgarKojzrhcaH0pJS2w8oBXT6u1IDvAcaDfjW0ILqG4")
+                .accessToken("your-api-key-here")
+                .accessTokenSecret("your-api-key-here")
+                .apiKey("your-api-key-here")
+                .apiSecretKey("your-api-key-here")
+                .bearerToken("your-api-key-here")
                 .build());
 
         username = findViewById(R.id.twitterUsername);
